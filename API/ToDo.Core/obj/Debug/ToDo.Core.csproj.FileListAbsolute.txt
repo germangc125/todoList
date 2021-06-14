@@ -1,0 +1,6 @@
+C:\Users\german.gracia\Downloads\ToDoAPI-master\ToDoAPI-master\ToDo.Core\bin\Debug\ToDo.Core.dll
+C:\Users\german.gracia\Downloads\ToDoAPI-master\ToDoAPI-master\ToDo.Core\bin\Debug\ToDo.Core.pdb
+C:\Users\german.gracia\Downloads\ToDoAPI-master\ToDoAPI-master\ToDo.Core\obj\Debug\ToDo.Core.csproj.AssemblyReference.cache
+C:\Users\german.gracia\Downloads\ToDoAPI-master\ToDoAPI-master\ToDo.Core\obj\Debug\ToDo.Core.csproj.CoreCompileInputs.cache
+C:\Users\german.gracia\Downloads\ToDoAPI-master\ToDoAPI-master\ToDo.Core\obj\Debug\ToDo.Core.dll
+C:\Users\german.gracia\Downloads\ToDoAPI-master\ToDoAPI-master\ToDo.Core\obj\Debug\ToDo.Core.pdb

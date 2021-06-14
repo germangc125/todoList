@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoList.Pages.ListPage"
+          
+          >
+
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Tareas Pendientes" HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   TextColor="white"/>
+        </StackLayout>
+
+    </NavigationPage.TitleView>
+
+
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+             <ListView
+                 x:Name="todoListView"
+                 RowHeight="50"
+                 IsPullToRefreshEnabled="true"
+                 Refreshing="Refresh"
+                 ItemSelected="SelectTask"
+           
+                 BackgroundColor="white"
+                 >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="Delete"
+                                          CommandParameter="{Binding .}"
+                                          Text="Eliminar"
+                                          IsDestructive="True"/>
+                                <MenuItem Clicked="Edit"
+                                          CommandParameter="{Binding .}"
+                                          Text="Editar" />
+                            </ViewCell.ContextActions>
+                            <Grid>
+                                <StackLayout Padding="15,5,5,0">
+                                    <Label Text="{Binding Name}" FontSize="13" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="15,0,0,0"></Label>
+                                  
+                                </StackLayout>
+                                <Image Source="check.png" x:Name="tickimage" IsVisible="{Binding IsComplete}" HorizontalOptions="End"/>
+                            </Grid>
+                        
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>    
+            </ListView>
+            <AbsoluteLayout>
+                <ImageButton Source="plus.png" 
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutFlags="PositionProportional"  
+                AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+                Clicked="AddTask" />
+            </AbsoluteLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
